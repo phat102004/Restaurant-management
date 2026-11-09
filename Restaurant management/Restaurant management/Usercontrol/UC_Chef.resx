@@ -123,7 +123,7 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnHoanThanh.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Algerian, 10.125pt, style=Bold</value>
+    <value>Segoe UI, 11pt, style=Bold</value>
   </data>
   <data name="btnHoanThanh.Location" type="System.Drawing.Point, System.Drawing">
     <value>532, 771</value>
@@ -235,13 +235,13 @@
     <value>True</value>
   </data>
   <data name="label6.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 9pt</value>
+    <value>Segoe UI, 10pt</value>
   </data>
   <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
     <value>595, 67</value>
   </data>
   <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>61, 29</value>
+    <value>67, 37</value>
   </data>
   <data name="label6.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
@@ -265,13 +265,13 @@
     <value>True</value>
   </data>
   <data name="label4.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 9pt</value>
+    <value>Segoe UI, 10pt</value>
   </data>
   <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
     <value>24, 118</value>
   </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>115, 29</value>
+    <value>130, 37</value>
   </data>
   <data name="label4.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
@@ -295,19 +295,19 @@
     <value>True</value>
   </data>
   <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 9pt</value>
+    <value>Segoe UI, 10pt</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
     <value>24, 67</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>107, 29</value>
+    <value>124, 37</value>
   </data>
   <data name="label2.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
-    <value>Tên món</value>
+    <value>Tên món:</value>
   </data>
   <data name="&gt;&gt;label2.Name" xml:space="preserve">
     <value>label2</value>
@@ -322,10 +322,10 @@
     <value>3</value>
   </data>
   <data name="txtTenMon.Location" type="System.Drawing.Point, System.Drawing">
-    <value>137, 62</value>
+    <value>154, 62</value>
   </data>
   <data name="txtTenMon.Size" type="System.Drawing.Size, System.Drawing">
-    <value>410, 39</value>
+    <value>410, 47</value>
   </data>
   <data name="txtTenMon.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
@@ -343,10 +343,10 @@
     <value>0</value>
   </data>
   <data name="txtSoLuong.Location" type="System.Drawing.Point, System.Drawing">
-    <value>137, 113</value>
+    <value>154, 115</value>
   </data>
   <data name="txtSoLuong.Size" type="System.Drawing.Size, System.Drawing">
-    <value>117, 39</value>
+    <value>117, 47</value>
   </data>
   <data name="txtSoLuong.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
@@ -364,10 +364,10 @@
     <value>2</value>
   </data>
   <data name="txtTenBan.Location" type="System.Drawing.Point, System.Drawing">
-    <value>662, 62</value>
+    <value>668, 63</value>
   </data>
   <data name="txtTenBan.Size" type="System.Drawing.Size, System.Drawing">
-    <value>410, 39</value>
+    <value>410, 47</value>
   </data>
   <data name="txtTenBan.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
@@ -388,7 +388,7 @@
     <value>Flat</value>
   </data>
   <data name="btnThoat.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Algerian, 10.125pt, style=Bold</value>
+    <value>Segoe UI, 11pt, style=Bold</value>
   </data>
   <data name="btnThoat.Location" type="System.Drawing.Point, System.Drawing">
     <value>1361, 3</value>
@@ -413,6 +413,9 @@
   </data>
   <data name="&gt;&gt;btnThoat.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="groupBox1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt, style=Bold</value>
   </data>
   <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
     <value>137, 521</value>

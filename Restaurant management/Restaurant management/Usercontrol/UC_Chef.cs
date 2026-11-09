@@ -38,7 +38,7 @@ namespace Restaurant_management.User_control
 
         private void UC_Chef_Load(object sender, EventArgs e)
         {
-            string chuoiKN = @"Data Source=LAPTOP-MK554FA4;Initial Catalog=DoAn;Integrated Security=True;Trust Server Certificate=True";
+            string chuoiKN = @"Data Source=LAPTOP-MK554FA4;Initial Catalog=QuanLyNhaHang;Integrated Security=True;Trust Server Certificate=True";
             ketNoi = new SqlConnection(chuoiKN);
             load_Data();
         }

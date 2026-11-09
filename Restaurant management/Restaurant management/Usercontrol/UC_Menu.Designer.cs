@@ -217,17 +217,6 @@
             label3.TabIndex = 3;
             label3.Text = "Tên món";
             // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Tahoma", 9F, FontStyle.Regular, GraphicsUnit.Point, 163);
-            label6.Location = new Point(98, 163);
-            label6.Name = "label6";
-            label6.Size = new Size(107, 29);
-            label6.TabIndex = 12;
-            label6.Text = "Số lượng";
-            label6.Click += label6_Click;
-            // 
             // groupBox1
             // 
             groupBox1.Controls.Add(btnXoa);

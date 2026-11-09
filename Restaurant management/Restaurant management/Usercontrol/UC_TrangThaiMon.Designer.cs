@@ -29,11 +29,6 @@
         private void InitializeComponent()
         {
             DgvTinhTrangMon = new DataGridView();
-            MaTrangThai = new DataGridViewTextBoxColumn();
-            TenMon = new DataGridViewTextBoxColumn();
-            SoLuong = new DataGridViewTextBoxColumn();
-            TenBan = new DataGridViewTextBoxColumn();
-            TinhTrang = new DataGridViewTextBoxColumn();
             txtSoLuong = new TextBox();
             label6 = new Label();
             label3 = new Label();
@@ -42,9 +37,14 @@
             label1 = new Label();
             BtnHoanThanh = new Button();
             groupBox1 = new GroupBox();
-            btnThoat = new Button();
-            txtTT = new TextBox();
             label2 = new Label();
+            txtTT = new TextBox();
+            btnThoat = new Button();
+            MaTrangThai = new DataGridViewTextBoxColumn();
+            TenMon = new DataGridViewTextBoxColumn();
+            SoLuong = new DataGridViewTextBoxColumn();
+            TenBan = new DataGridViewTextBoxColumn();
+            TinhTrang = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)DgvTinhTrangMon).BeginInit();
             groupBox1.SuspendLayout();
             SuspendLayout();
@@ -60,49 +60,9 @@
             DgvTinhTrangMon.TabIndex = 0;
             DgvTinhTrangMon.CellContentClick += DgvTinhTrangMon_CellContentClick;
             // 
-            // MaTrangThai
-            // 
-            MaTrangThai.DataPropertyName = "MaTrangThai";
-            MaTrangThai.HeaderText = "Mã trạng thái";
-            MaTrangThai.MinimumWidth = 10;
-            MaTrangThai.Name = "MaTrangThai";
-            MaTrangThai.Width = 210;
-            // 
-            // TenMon
-            // 
-            TenMon.DataPropertyName = "TenMon";
-            TenMon.HeaderText = "Tên món";
-            TenMon.MinimumWidth = 10;
-            TenMon.Name = "TenMon";
-            TenMon.Width = 200;
-            // 
-            // SoLuong
-            // 
-            SoLuong.DataPropertyName = "SoLuong";
-            SoLuong.HeaderText = "Số lượng";
-            SoLuong.MinimumWidth = 10;
-            SoLuong.Name = "SoLuong";
-            SoLuong.Width = 200;
-            // 
-            // TenBan
-            // 
-            TenBan.DataPropertyName = "TenBan";
-            TenBan.HeaderText = "Tên bàn";
-            TenBan.MinimumWidth = 10;
-            TenBan.Name = "TenBan";
-            TenBan.Width = 200;
-            // 
-            // TinhTrang
-            // 
-            TinhTrang.DataPropertyName = "TinhTrang";
-            TinhTrang.HeaderText = "Tình trạng";
-            TinhTrang.MinimumWidth = 10;
-            TinhTrang.Name = "TinhTrang";
-            TinhTrang.Width = 200;
-            // 
             // txtSoLuong
             // 
-            txtSoLuong.Location = new Point(205, 115);
+            txtSoLuong.Location = new Point(225, 113);
             txtSoLuong.Name = "txtSoLuong";
             txtSoLuong.Size = new Size(91, 39);
             txtSoLuong.TabIndex = 17;
@@ -111,7 +71,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Tahoma", 9F, FontStyle.Regular, GraphicsUnit.Point, 163);
-            label6.Location = new Point(68, 120);
+            label6.Location = new Point(68, 118);
             label6.Name = "label6";
             label6.Size = new Size(107, 29);
             label6.TabIndex = 16;
@@ -182,6 +142,22 @@
             groupBox1.TabIndex = 19;
             groupBox1.TabStop = false;
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(68, 53);
+            label2.Name = "label2";
+            label2.Size = new Size(151, 32);
+            label2.TabIndex = 15;
+            label2.Text = "ID_TrangThai";
+            // 
+            // txtTT
+            // 
+            txtTT.Location = new Point(225, 49);
+            txtTT.Name = "txtTT";
+            txtTT.Size = new Size(280, 39);
+            txtTT.TabIndex = 14;
+            // 
             // btnThoat
             // 
             btnThoat.BackColor = Color.IndianRed;
@@ -199,21 +175,45 @@
             btnThoat.UseVisualStyleBackColor = false;
             btnThoat.Click += btnThoat_Click;
             // 
-            // txtTT
+            // MaTrangThai
             // 
-            txtTT.Location = new Point(205, 50);
-            txtTT.Name = "txtTT";
-            txtTT.Size = new Size(280, 39);
-            txtTT.TabIndex = 14;
+            MaTrangThai.DataPropertyName = "MaTrangThai";
+            MaTrangThai.HeaderText = "Mã trạng thái";
+            MaTrangThai.MinimumWidth = 10;
+            MaTrangThai.Name = "MaTrangThai";
+            MaTrangThai.Width = 210;
             // 
-            // label2
+            // TenMon
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(68, 53);
-            label2.Name = "label2";
-            label2.Size = new Size(151, 32);
-            label2.TabIndex = 15;
-            label2.Text = "ID_TrangThai";
+            TenMon.DataPropertyName = "TenMon";
+            TenMon.HeaderText = "Tên món";
+            TenMon.MinimumWidth = 10;
+            TenMon.Name = "TenMon";
+            TenMon.Width = 400;
+            // 
+            // SoLuong
+            // 
+            SoLuong.DataPropertyName = "SoLuong";
+            SoLuong.HeaderText = "Số lượng";
+            SoLuong.MinimumWidth = 10;
+            SoLuong.Name = "SoLuong";
+            SoLuong.Width = 200;
+            // 
+            // TenBan
+            // 
+            TenBan.DataPropertyName = "TenBan";
+            TenBan.HeaderText = "Tên bàn";
+            TenBan.MinimumWidth = 10;
+            TenBan.Name = "TenBan";
+            TenBan.Width = 300;
+            // 
+            // TinhTrang
+            // 
+            TinhTrang.DataPropertyName = "TinhTrang";
+            TinhTrang.HeaderText = "Tình trạng";
+            TinhTrang.MinimumWidth = 10;
+            TinhTrang.Name = "TinhTrang";
+            TinhTrang.Width = 300;
             // 
             // UC_TrangThaiMon
             // 
@@ -244,12 +244,12 @@
         private Button BtnHoanThanh;
         private GroupBox groupBox1;
         private Button btnThoat;
+        private Label label2;
+        private TextBox txtTT;
         private DataGridViewTextBoxColumn MaTrangThai;
         private DataGridViewTextBoxColumn TenMon;
         private DataGridViewTextBoxColumn SoLuong;
         private DataGridViewTextBoxColumn TenBan;
         private DataGridViewTextBoxColumn TinhTrang;
-        private Label label2;
-        private TextBox txtTT;
     }
 }

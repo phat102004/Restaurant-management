@@ -25,7 +25,200 @@ namespace Restaurant_management.User_control
             boDocGhi = new SqlDataAdapter();
             ketNoi = new SqlConnection();
             InitializeComponent();
+            ApplyModernBlueTheme();
         }
+
+
+        private void ApplyModernBlueTheme()
+        {
+            // ============================================
+            // BẢNG MÀU MODERN BLUE
+            // ============================================
+
+            Color primaryBlue = Color.FromArgb(30, 64, 175);
+            Color brightBlue = Color.FromArgb(37, 99, 235);
+            Color darkBlue = Color.FromArgb(16, 42, 67);
+            Color contentBg = Color.FromArgb(241, 245, 249);
+            Color paleBlue = Color.FromArgb(239, 246, 255);
+            Color borderColor = Color.FromArgb(203, 213, 225);
+
+            // ============================================
+            // NỀN USERCONTROL VÀ PANEL
+            // ============================================
+
+            BackColor = contentBg;
+
+            panel5.BackColor = contentBg;
+            panel6.BackColor = Color.White;
+            panel_UC_Order.BackColor = contentBg;
+            panel2.BackColor = contentBg;
+
+            // Giữ nguyên splitter, chỉ đổi màu
+            splitter1.BackColor = borderColor;
+
+            // ============================================
+            // NHÓM THÔNG TIN ĐẶT MÓN
+            // ============================================
+
+            groupBox1.BackColor = Color.White;
+            groupBox1.ForeColor = primaryBlue;
+            groupBox1.Text = "  THÔNG TIN ĐẶT MÓN  ";
+            groupBox1.Font = new Font(
+                "Segoe UI", 10F, FontStyle.Bold);
+
+            // ============================================
+            // NHÓM CHỨC NĂNG
+            // ============================================
+
+            groupBox2.BackColor = Color.White;
+            groupBox2.ForeColor = primaryBlue;
+            groupBox2.Text = "  XỬ LÝ ĐƠN HÀNG  ";
+            groupBox2.Font = new Font(
+                "Segoe UI", 10F, FontStyle.Bold);
+
+            // ============================================
+            // LABELS
+            // ============================================
+
+            Label[] labels =
+            {
+        label3,
+        label4,
+        label5,
+        label6
+    };
+
+            foreach (Label label in labels)
+            {
+                label.BackColor = Color.White;
+                label.ForeColor = darkBlue;
+                label.Font = new Font(
+                    "Segoe UI", 9F, FontStyle.Regular);
+            }
+
+            // ============================================
+            // COMBOBOX
+            // ============================================
+
+            ComboBox[] comboBoxes =
+            {
+        cbxTenMon,
+        cbxTenBan,
+        cbxTenLoai
+    };
+
+            foreach (ComboBox combo in comboBoxes)
+            {
+                combo.BackColor = paleBlue;
+                combo.ForeColor = darkBlue;
+                combo.FlatStyle = FlatStyle.Flat;
+
+                // Không thay đổi Location hoặc Size
+            }
+
+            // ============================================
+            // SỐ LƯỢNG
+            // ============================================
+
+            txtSoLuong.BackColor = paleBlue;
+            txtSoLuong.ForeColor = darkBlue;
+            txtSoLuong.BorderStyle = BorderStyle.FixedSingle;
+
+            // ============================================
+            // NÚT THÊM MÓN
+            // ============================================
+
+            BtnThemMon.BackColor = primaryBlue;
+            BtnThemMon.ForeColor = Color.White;
+            BtnThemMon.Cursor = Cursors.Hand;
+            BtnThemMon.FlatStyle = FlatStyle.Flat;
+            BtnThemMon.FlatAppearance.BorderSize = 0;
+            BtnThemMon.FlatAppearance.MouseOverBackColor = brightBlue;
+            BtnThemMon.FlatAppearance.MouseDownBackColor = darkBlue;
+            BtnThemMon.Font = new Font(
+                "Segoe UI", 10F, FontStyle.Bold);
+            BtnThemMon.UseVisualStyleBackColor = false;
+
+            // ============================================
+            // NÚT BÁO CHẾ BIẾN
+            // ============================================
+
+            BtnCheBien.BackColor = Color.FromArgb(29, 78, 216);
+            BtnCheBien.ForeColor = Color.White;
+            BtnCheBien.Cursor = Cursors.Hand;
+            BtnCheBien.FlatStyle = FlatStyle.Flat;
+            BtnCheBien.FlatAppearance.BorderSize = 0;
+            BtnCheBien.FlatAppearance.MouseOverBackColor = brightBlue;
+            BtnCheBien.FlatAppearance.MouseDownBackColor = darkBlue;
+            BtnCheBien.Font = new Font(
+                "Segoe UI", 10F, FontStyle.Bold);
+            BtnCheBien.UseVisualStyleBackColor = false;
+
+            // ============================================
+            // NÚT THOÁT
+            // ============================================
+
+            BtnThoat.BackColor = Color.FromArgb(226, 232, 240);
+            BtnThoat.ForeColor = darkBlue;
+            BtnThoat.Cursor = Cursors.Hand;
+            BtnThoat.FlatStyle = FlatStyle.Flat;
+            BtnThoat.FlatAppearance.BorderSize = 0;
+            BtnThoat.FlatAppearance.MouseOverBackColor =
+                Color.FromArgb(254, 202, 202);
+            BtnThoat.FlatAppearance.MouseDownBackColor =
+                Color.FromArgb(249, 190, 190);
+            BtnThoat.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            BtnThoat.Text = "×";
+            BtnThoat.UseVisualStyleBackColor = false;
+
+            // ============================================
+            // BẢNG DANH SÁCH MÓN ĐÃ ĐẶT
+            // ============================================
+
+            Dgv_Oder.BackgroundColor = Color.White;
+            Dgv_Oder.BorderStyle = BorderStyle.None;
+            Dgv_Oder.GridColor = borderColor;
+
+            Dgv_Oder.EnableHeadersVisualStyles = false;
+
+            Dgv_Oder.ColumnHeadersDefaultCellStyle.BackColor =
+                primaryBlue;
+
+            Dgv_Oder.ColumnHeadersDefaultCellStyle.ForeColor =
+                Color.White;
+
+            Dgv_Oder.ColumnHeadersDefaultCellStyle.Font =
+                new Font("Segoe UI", 10F, FontStyle.Bold);
+
+            Dgv_Oder.ColumnHeadersDefaultCellStyle.Alignment =
+                DataGridViewContentAlignment.MiddleCenter;
+
+            Dgv_Oder.DefaultCellStyle.BackColor = Color.White;
+            Dgv_Oder.DefaultCellStyle.ForeColor = darkBlue;
+            Dgv_Oder.DefaultCellStyle.Font =
+                new Font("Segoe UI", 10F);
+
+            Dgv_Oder.DefaultCellStyle.SelectionBackColor =
+                Color.FromArgb(219, 234, 254);
+
+            Dgv_Oder.DefaultCellStyle.SelectionForeColor =
+                darkBlue;
+
+            Dgv_Oder.AlternatingRowsDefaultCellStyle.BackColor =
+                Color.FromArgb(248, 250, 252);
+
+            Dgv_Oder.SelectionMode =
+                DataGridViewSelectionMode.FullRowSelect;
+
+            // Giữ nguyên:
+            // - AllowUserToAddRows = false
+            // - RowHeadersVisible = false
+            // - Các cột TenMon, SoLuong, TenBan
+            // - Các DataPropertyName
+            // - Các sự kiện Click / Load
+            // - Toàn bộ kích thước và vị trí
+        }
+
 
         private void Load_Ban()
         {
@@ -189,7 +382,7 @@ namespace Restaurant_management.User_control
 
         private void UC_Menu_Load(object sender, EventArgs e)
         {
-            string chuoiKN = @"Data Source=LAPTOP-MK554FA4;Initial Catalog=DoAn;Integrated Security=True;Trust Server Certificate=True";
+            string chuoiKN = @"Data Source=LAPTOP-MK554FA4;Initial Catalog=QuanLyNhaHang;Integrated Security=True;Trust Server Certificate=True";
             ketNoi = new SqlConnection(chuoiKN);
             Load_LoaiMonAn();
             Load_Ban();

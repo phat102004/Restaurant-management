@@ -20,6 +20,7 @@ namespace Restaurant_management.User_control
         public UC_Employee()
         {
             InitializeComponent();
+            ApplyModernBlueTheme();
             ketNoi = new SqlConnection();
             boLenh = new SqlCommand();
             docGhi = new SqlDataAdapter();
@@ -38,6 +39,119 @@ namespace Restaurant_management.User_control
             dgvNV.DataSource = duLieu.Tables[0];
         }
 
+
+        private void ApplyModernBlueTheme()
+        {
+            Color primaryBlue = Color.FromArgb(30, 64, 175);
+            Color brightBlue = Color.FromArgb(37, 99, 235);
+            Color darkBlue = Color.FromArgb(16, 42, 67);
+            Color contentBg = Color.FromArgb(241, 245, 249);
+            Color paleBlue = Color.FromArgb(239, 246, 255);
+            Color dangerRed = Color.FromArgb(185, 28, 28);
+
+            // Nền
+            BackColor = contentBg;
+            panel3.BackColor = contentBg;
+            panel_Employee.BackColor = Color.White;
+
+            // Nhóm thông tin
+            groupBox1.BackColor = Color.White;
+            groupBox2.BackColor = Color.White;
+
+            groupBox1.ForeColor = primaryBlue;
+            groupBox2.ForeColor = primaryBlue;
+
+            groupBox1.Font = new Font(
+                "Segoe UI", 10.5F, FontStyle.Bold);
+
+            groupBox2.Font = new Font(
+                "Segoe UI", 10.5F, FontStyle.Bold);
+
+            // Nhãn
+            Label[] labels =
+            {
+        label2, label4, label6,
+        label3, label5, label8
+    };
+
+            foreach (Label label in labels)
+            {
+                label.ForeColor = darkBlue;
+                label.Font = new Font("Segoe UI", 10F);
+            }
+
+            // Ô nhập
+            TextBox[] textBoxes =
+            {
+        txtID_NV, txtSDT, txtDiaChi,
+        txtHoTen, TxtCaLam, txtTimKiem
+    };
+
+            foreach (TextBox textbox in textBoxes)
+            {
+                textbox.BackColor = paleBlue;
+                textbox.ForeColor = darkBlue;
+                textbox.BorderStyle = BorderStyle.FixedSingle;
+            }
+
+            cbxTenCV.BackColor = paleBlue;
+            cbxTenCV.ForeColor = darkBlue;
+
+            // Nút chức năng
+            Button[] buttons =
+            {
+        btnThem, btnSua, btnXoa, btnTimKiem
+    };
+
+            foreach (Button button in buttons)
+            {
+                button.BackColor = primaryBlue;
+                button.ForeColor = Color.White;
+                button.FlatStyle = FlatStyle.Flat;
+                button.FlatAppearance.BorderSize = 0;
+                button.FlatAppearance.MouseOverBackColor = brightBlue;
+                button.FlatAppearance.MouseDownBackColor = darkBlue;
+                button.Font = new Font(
+                    "Segoe UI", 10F, FontStyle.Bold);
+                button.Cursor = Cursors.Hand;
+                button.UseVisualStyleBackColor = false;
+            }
+
+            // Nút xóa
+            btnXoa.BackColor = dangerRed;
+            btnXoa.FlatAppearance.MouseOverBackColor =
+                Color.FromArgb(220, 38, 38);
+
+            // Nút thoát
+            btnThoat.BackColor = Color.FromArgb(226, 232, 240);
+            btnThoat.ForeColor = darkBlue;
+            btnThoat.FlatStyle = FlatStyle.Flat;
+            btnThoat.FlatAppearance.BorderSize = 0;
+            btnThoat.Text = "×";
+
+            // Bảng nhân viên
+            dgvNV.BackgroundColor = Color.White;
+            dgvNV.BorderStyle = BorderStyle.None;
+            dgvNV.EnableHeadersVisualStyles = false;
+
+            dgvNV.ColumnHeadersDefaultCellStyle.BackColor =
+                primaryBlue;
+            dgvNV.ColumnHeadersDefaultCellStyle.ForeColor =
+                Color.White;
+
+            dgvNV.ColumnHeadersDefaultCellStyle.Font =
+                new Font("Segoe UI", 10F, FontStyle.Bold);
+
+            dgvNV.DefaultCellStyle.ForeColor = darkBlue;
+            dgvNV.DefaultCellStyle.SelectionBackColor =
+                Color.FromArgb(219, 234, 254);
+            dgvNV.DefaultCellStyle.SelectionForeColor = darkBlue;
+
+            dgvNV.AlternatingRowsDefaultCellStyle.BackColor =
+                Color.FromArgb(248, 250, 252);
+        }
+
+
         private void load_CbxTenCV()
         {
             string data = "select * from ChucVu";
@@ -52,7 +166,7 @@ namespace Restaurant_management.User_control
 
         private void UC_Employee_Load(object sender, EventArgs e)
         {
-            string chuoiKN = @"Data Source=LAPTOP-MK554FA4;Initial Catalog=DoAn;Integrated Security=True;Trust Server Certificate=True";
+            string chuoiKN = @"Data Source=LAPTOP-MK554FA4;Initial Catalog=QuanLyNhaHang;Integrated Security=True;Trust Server Certificate=True";
             ketNoi = new SqlConnection(chuoiKN);
             load_Data();
             load_CbxTenCV();

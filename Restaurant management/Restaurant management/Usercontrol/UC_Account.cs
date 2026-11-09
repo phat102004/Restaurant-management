@@ -24,6 +24,7 @@ namespace Restaurant_management.User_control
             duLieu = new DataSet();
             docGhi = new SqlDataAdapter();
             InitializeComponent();
+            ApplyModernBlueTheme();
         }
         private void LoadNV()
         {
@@ -41,6 +42,132 @@ namespace Restaurant_management.User_control
             CbxID_NV.ValueMember = "ID_NhanVien";
         }
 
+
+        private void ApplyModernBlueTheme()
+        {
+            Color primaryBlue = Color.FromArgb(30, 64, 175);
+            Color brightBlue = Color.FromArgb(37, 99, 235);
+            Color darkBlue = Color.FromArgb(16, 42, 67);
+            Color contentBg = Color.FromArgb(241, 245, 249);
+            Color paleBlue = Color.FromArgb(239, 246, 255);
+            Color dangerRed = Color.FromArgb(185, 28, 28);
+
+            // 1. Nền UserControl
+            BackColor = contentBg;
+            panel1.BackColor = Color.White;
+
+            // 2. Nhóm thông tin
+            GroupBox[] groups =
+            {
+        groupBox1,
+        groupBox2,
+        groupBox3
+    };
+
+            foreach (GroupBox group in groups)
+            {
+                group.BackColor = Color.White;
+                group.ForeColor = primaryBlue;
+                group.Font = new Font(
+                    "Segoe UI", 11F, FontStyle.Bold);
+            }
+
+            // 3. Nhãn
+            Label[] labels =
+            {
+        label1, label2, label3, label4, a
+    };
+
+            foreach (Label label in labels)
+            {
+                label.Font = new Font("Segoe UI", 10F);
+                label.ForeColor = darkBlue;
+            }
+
+            // 4. ComboBox
+            ComboBox[] combos =
+            {
+        CbxID_NV,
+        CbxTenNV,
+        CbxChucVu
+    };
+
+            foreach (ComboBox combo in combos)
+            {
+                combo.BackColor = paleBlue;
+                combo.ForeColor = darkBlue;
+                combo.FlatStyle = FlatStyle.Flat;
+            }
+
+            // 5. TextBox
+            TextBox[] textBoxes =
+            {
+        TxtTenDN,
+        TxtMatKhau
+    };
+
+            foreach (TextBox textBox in textBoxes)
+            {
+                textBox.BackColor = paleBlue;
+                textBox.ForeColor = darkBlue;
+                textBox.BorderStyle = BorderStyle.FixedSingle;
+            }
+
+            // 6. Nút chức năng
+            Button[] buttons =
+            {
+        BtnThem,
+        BtnSua,
+        BtnXoa
+    };
+
+            foreach (Button button in buttons)
+            {
+                button.BackColor = primaryBlue;
+                button.ForeColor = Color.White;
+                button.FlatStyle = FlatStyle.Flat;
+                button.FlatAppearance.BorderSize = 0;
+                button.FlatAppearance.MouseOverBackColor = brightBlue;
+                button.FlatAppearance.MouseDownBackColor = darkBlue;
+                button.Font = new Font(
+                    "Segoe UI", 11F, FontStyle.Bold);
+                button.Cursor = Cursors.Hand;
+                button.UseVisualStyleBackColor = false;
+            }
+
+            // Nút xóa màu đỏ
+            BtnXoa.BackColor = dangerRed;
+            BtnXoa.FlatAppearance.MouseOverBackColor =
+                Color.FromArgb(220, 38, 38);
+
+            // 7. Nút thoát
+            btnThoat.BackColor = Color.FromArgb(226, 232, 240);
+            btnThoat.ForeColor = darkBlue;
+            btnThoat.FlatStyle = FlatStyle.Flat;
+            btnThoat.FlatAppearance.BorderSize = 0;
+            btnThoat.Text = "×";
+
+            // 8. DataGridView tài khoản
+            DgvAccount.BackgroundColor = Color.White;
+            DgvAccount.BorderStyle = BorderStyle.None;
+            DgvAccount.GridColor = Color.FromArgb(203, 213, 225);
+            DgvAccount.EnableHeadersVisualStyles = false;
+
+            DgvAccount.ColumnHeadersDefaultCellStyle.BackColor =
+                primaryBlue;
+            DgvAccount.ColumnHeadersDefaultCellStyle.ForeColor =
+                Color.White;
+            DgvAccount.ColumnHeadersDefaultCellStyle.Font =
+                new Font("Segoe UI", 10F, FontStyle.Bold);
+
+            DgvAccount.DefaultCellStyle.ForeColor = darkBlue;
+            DgvAccount.DefaultCellStyle.SelectionBackColor =
+                Color.FromArgb(219, 234, 254);
+            DgvAccount.DefaultCellStyle.SelectionForeColor = darkBlue;
+
+            DgvAccount.AlternatingRowsDefaultCellStyle.BackColor =
+                Color.FromArgb(248, 250, 252);
+        }
 
         private void LoadCV()
         {
@@ -66,7 +193,7 @@ namespace Restaurant_management.User_control
         }
         private void UC_Account_Load(object sender, EventArgs e)
         {
-            string chuoiKN = @"Data Source=LAPTOP-MK554FA4;Initial Catalog=DoAn;Integrated Security=True;Trust Server Certificate=True";
+            string chuoiKN = @"Data Source=LAPTOP-MK554FA4;Initial Catalog=QuanLyNhaHang;Integrated Security=True;Trust Server Certificate=True";
             ketNoi = new SqlConnection(chuoiKN);
             Load_Data();
             LoadCV();

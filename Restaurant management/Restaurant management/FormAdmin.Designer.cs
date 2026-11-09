@@ -26,9 +26,12 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
+
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAdmin));
+            System.ComponentModel.ComponentResourceManager resources =
+                new System.ComponentModel.ComponentResourceManager(typeof(FormAdmin));
+
             panel1 = new Panel();
             panelContainer = new Panel();
             btnThoat = new Button();
@@ -43,49 +46,77 @@
             btnFood = new Button();
             btnTable = new Button();
             btnHome = new Button();
+
             panel1.SuspendLayout();
             panelContainer.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
-            // 
-            // panel1
-            // 
+
+            // =============================================
+            // BẢNG MÀU MODERN BLUE
+            // =============================================
+
+            Color sidebarColor = Color.FromArgb(16, 42, 67);
+            Color menuColor = Color.FromArgb(30, 64, 175);
+            Color hoverColor = Color.FromArgb(37, 99, 235);
+            Color pressedColor = Color.FromArgb(29, 78, 216);
+            Color textColor = Color.FromArgb(241, 245, 249);
+            Color contentColor = Color.FromArgb(241, 245, 249);
+
+            // =============================================
+            // PANEL CHÍNH - GIỮ NGUYÊN KÍCH THƯỚC
+            // =============================================
+
+            panel1.BackColor = contentColor;
             panel1.Controls.Add(panelContainer);
             panel1.Controls.Add(panel2);
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(1862, 875);
             panel1.TabIndex = 0;
-            // 
-            // panelContainer
-            // 
+
+            // =============================================
+            // PANEL CONTAINER - GIỮ 1416 x 875
+            // =============================================
+
+            panelContainer.BackColor = contentColor;
             panelContainer.Controls.Add(btnThoat);
             panelContainer.Dock = DockStyle.Right;
             panelContainer.Location = new Point(446, 0);
             panelContainer.Name = "panelContainer";
             panelContainer.Size = new Size(1416, 875);
             panelContainer.TabIndex = 4;
-            // 
-            // btnThoat
-            // 
-            btnThoat.BackColor = Color.IndianRed;
+
+            // =============================================
+            // NÚT THOÁT
+            // =============================================
+
+            btnThoat.BackColor = Color.FromArgb(226, 232, 240);
             btnThoat.Cursor = Cursors.Hand;
-            btnThoat.FlatAppearance.MouseDownBackColor = Color.FromArgb(192, 0, 0);
-            btnThoat.FlatAppearance.MouseOverBackColor = Color.Gray;
+            btnThoat.FlatAppearance.BorderSize = 0;
+            btnThoat.FlatAppearance.MouseDownBackColor =
+                Color.FromArgb(185, 28, 28);
+            btnThoat.FlatAppearance.MouseOverBackColor =
+                Color.FromArgb(254, 202, 202);
             btnThoat.FlatStyle = FlatStyle.Flat;
-            btnThoat.Font = new Font("Tahoma", 10.125F, FontStyle.Regular, GraphicsUnit.Point, 163);
-            btnThoat.Location = new Point(1364, 3);
+            btnThoat.Font = new Font(
+                "Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            btnThoat.ForeColor = Color.FromArgb(51, 65, 85);
+            btnThoat.Location = new Point(1357, 8);
             btnThoat.Name = "btnThoat";
-            btnThoat.Size = new Size(52, 47);
+            btnThoat.Size = new Size(44, 42);
+            btnThoat.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnThoat.TabIndex = 0;
-            btnThoat.Text = "x";
+            btnThoat.Text = "×";
             btnThoat.UseVisualStyleBackColor = false;
             btnThoat.Click += btnThoat_Click;
-            // 
-            // panel2
-            // 
-            panel2.BackColor = Color.FromArgb(255, 192, 192);
+
+            // =============================================
+            // SIDEBAR - GIỮ NGUYÊN RỘNG 442
+            // =============================================
+
+            panel2.BackColor = sidebarColor;
             panel2.Controls.Add(BtnDangXuat);
             panel2.Controls.Add(BtnAccount);
             panel2.Controls.Add(pictureBox2);
@@ -101,191 +132,152 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(442, 875);
             panel2.TabIndex = 3;
-            // 
-            // BtnDangXuat
-            // 
-            BtnDangXuat.BackColor = Color.Gray;
-            BtnDangXuat.Font = new Font("Algerian", 10.125F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            BtnDangXuat.Location = new Point(-3, 800);
-            BtnDangXuat.Name = "BtnDangXuat";
-            BtnDangXuat.Size = new Size(445, 65);
-            BtnDangXuat.TabIndex = 11;
-            BtnDangXuat.Text = "Đăng xuất";
-            BtnDangXuat.UseVisualStyleBackColor = false;
-            BtnDangXuat.Click += BtnDangXuat_Click;
-            // 
-            // BtnAccount
-            // 
-            BtnAccount.BackColor = Color.IndianRed;
-            BtnAccount.Cursor = Cursors.Hand;
-            BtnAccount.FlatAppearance.BorderSize = 0;
-            BtnAccount.FlatAppearance.MouseDownBackColor = Color.FromArgb(192, 255, 255);
-            BtnAccount.FlatAppearance.MouseOverBackColor = SystemColors.ActiveCaption;
-            BtnAccount.FlatStyle = FlatStyle.Flat;
-            BtnAccount.Font = new Font("Algerian", 10.875F, FontStyle.Bold);
-            BtnAccount.ForeColor = Color.White;
-            BtnAccount.Location = new Point(-2, 626);
-            BtnAccount.Name = "BtnAccount";
-            BtnAccount.Size = new Size(442, 52);
-            BtnAccount.TabIndex = 10;
-            BtnAccount.Text = "Tài khoản";
-            BtnAccount.UseVisualStyleBackColor = false;
-            BtnAccount.Click += BtnAccount_Click;
-            // 
-            // pictureBox2
-            // 
-            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(0, 3);
+
+            // =============================================
+            // LOGO - GIỮ NGUYÊN RESOURCE
+            // =============================================
+
+            pictureBox2.BackColor = sidebarColor;
+            pictureBox2.Image =
+                (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(15, 10);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(439, 211);
+            pictureBox2.Size = new Size(412, 195);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 7;
             pictureBox2.TabStop = false;
             pictureBox2.Click += pictureBox2_Click;
-            // 
-            // BtnIngredient
-            // 
-            BtnIngredient.BackColor = Color.IndianRed;
-            BtnIngredient.Cursor = Cursors.Hand;
-            BtnIngredient.FlatAppearance.BorderSize = 0;
-            BtnIngredient.FlatAppearance.MouseDownBackColor = Color.FromArgb(192, 255, 255);
-            BtnIngredient.FlatAppearance.MouseOverBackColor = SystemColors.ActiveCaption;
-            BtnIngredient.FlatStyle = FlatStyle.Flat;
-            BtnIngredient.Font = new Font("Algerian", 10.875F, FontStyle.Bold);
-            BtnIngredient.ForeColor = Color.White;
-            BtnIngredient.Location = new Point(-3, 568);
-            BtnIngredient.Name = "BtnIngredient";
-            BtnIngredient.Size = new Size(442, 52);
-            BtnIngredient.TabIndex = 9;
-            BtnIngredient.Text = "Nguyên liệu";
-            BtnIngredient.UseVisualStyleBackColor = false;
-            BtnIngredient.Click += BtnIngredient_Click;
-            // 
-            // btnRevenue
-            // 
-            btnRevenue.BackColor = Color.IndianRed;
-            btnRevenue.Cursor = Cursors.Hand;
-            btnRevenue.FlatAppearance.BorderSize = 0;
-            btnRevenue.FlatAppearance.MouseDownBackColor = Color.FromArgb(192, 255, 255);
-            btnRevenue.FlatAppearance.MouseOverBackColor = SystemColors.ActiveCaption;
-            btnRevenue.FlatStyle = FlatStyle.Flat;
-            btnRevenue.Font = new Font("Algerian", 10.875F, FontStyle.Bold);
-            btnRevenue.ForeColor = Color.White;
-            btnRevenue.Location = new Point(-3, 510);
-            btnRevenue.Name = "btnRevenue";
-            btnRevenue.Size = new Size(442, 52);
-            btnRevenue.TabIndex = 6;
-            btnRevenue.Text = "Doanh thu";
-            btnRevenue.UseVisualStyleBackColor = false;
-            btnRevenue.Click += btnRevenue_Click;
-            // 
-            // btnEmployee
-            // 
-            btnEmployee.BackColor = Color.IndianRed;
-            btnEmployee.Cursor = Cursors.Hand;
-            btnEmployee.FlatAppearance.BorderSize = 0;
-            btnEmployee.FlatAppearance.MouseDownBackColor = Color.FromArgb(192, 255, 255);
-            btnEmployee.FlatAppearance.MouseOverBackColor = SystemColors.ActiveCaption;
-            btnEmployee.FlatStyle = FlatStyle.Flat;
-            btnEmployee.Font = new Font("Algerian", 10.875F, FontStyle.Bold);
-            btnEmployee.ForeColor = Color.White;
-            btnEmployee.Location = new Point(-3, 452);
-            btnEmployee.Name = "btnEmployee";
-            btnEmployee.Size = new Size(442, 52);
-            btnEmployee.TabIndex = 5;
-            btnEmployee.Text = "Nhân viên";
-            btnEmployee.UseVisualStyleBackColor = false;
-            btnEmployee.Click += btnEmployee_Click;
-            // 
-            // btnBill
-            // 
-            btnBill.BackColor = Color.IndianRed;
-            btnBill.Cursor = Cursors.Hand;
-            btnBill.FlatAppearance.BorderSize = 0;
-            btnBill.FlatAppearance.MouseDownBackColor = Color.FromArgb(192, 255, 255);
-            btnBill.FlatAppearance.MouseOverBackColor = SystemColors.ActiveCaption;
-            btnBill.FlatStyle = FlatStyle.Flat;
-            btnBill.Font = new Font("Algerian", 10.875F, FontStyle.Bold);
-            btnBill.ForeColor = Color.White;
-            btnBill.Location = new Point(-2, 394);
-            btnBill.Name = "btnBill";
-            btnBill.Size = new Size(442, 52);
-            btnBill.TabIndex = 4;
-            btnBill.Text = "Thanh toán";
-            btnBill.UseVisualStyleBackColor = false;
-            btnBill.Click += btnBill_Click;
-            // 
-            // btnFood
-            // 
-            btnFood.BackColor = Color.IndianRed;
-            btnFood.Cursor = Cursors.Hand;
-            btnFood.FlatAppearance.BorderSize = 0;
-            btnFood.FlatAppearance.MouseDownBackColor = Color.FromArgb(192, 255, 255);
-            btnFood.FlatAppearance.MouseOverBackColor = SystemColors.ActiveCaption;
-            btnFood.FlatStyle = FlatStyle.Flat;
-            btnFood.Font = new Font("Algerian", 10.875F, FontStyle.Bold);
-            btnFood.ForeColor = Color.White;
-            btnFood.Location = new Point(-3, 278);
-            btnFood.Name = "btnFood";
-            btnFood.Size = new Size(442, 52);
-            btnFood.TabIndex = 2;
-            btnFood.Text = "Thực đơn";
-            btnFood.UseVisualStyleBackColor = false;
-            btnFood.Click += btnFood_Click;
-            // 
-            // btnTable
-            // 
-            btnTable.BackColor = Color.IndianRed;
-            btnTable.Cursor = Cursors.Hand;
-            btnTable.FlatAppearance.BorderSize = 0;
-            btnTable.FlatAppearance.MouseDownBackColor = Color.FromArgb(192, 255, 255);
-            btnTable.FlatAppearance.MouseOverBackColor = SystemColors.ActiveCaption;
-            btnTable.FlatStyle = FlatStyle.Flat;
-            btnTable.Font = new Font("Algerian", 10.875F, FontStyle.Bold);
-            btnTable.ForeColor = Color.White;
-            btnTable.Location = new Point(-2, 336);
-            btnTable.Name = "btnTable";
-            btnTable.Size = new Size(442, 52);
-            btnTable.TabIndex = 3;
-            btnTable.Text = "Bàn";
-            btnTable.UseVisualStyleBackColor = false;
-            btnTable.Click += btnTable_Click;
-            // 
-            // btnHome
-            // 
-            btnHome.BackColor = Color.IndianRed;
-            btnHome.Cursor = Cursors.Hand;
-            btnHome.FlatAppearance.BorderSize = 0;
-            btnHome.FlatAppearance.MouseDownBackColor = Color.FromArgb(192, 255, 255);
-            btnHome.FlatAppearance.MouseOverBackColor = SystemColors.ActiveCaption;
-            btnHome.FlatStyle = FlatStyle.Flat;
-            btnHome.Font = new Font("Algerian", 10.875F, FontStyle.Bold);
-            btnHome.ForeColor = Color.White;
-            btnHome.Location = new Point(-3, 220);
+
+            // =============================================
+            // GIAO DIỆN MENU - CHỈ THAY STYLE
+            // =============================================
+
+            Button[] menuButtons =
+            {
+        btnHome,
+        btnFood,
+        btnTable,
+        btnBill,
+        btnEmployee,
+        btnRevenue,
+        BtnIngredient,
+        BtnAccount
+    };
+
+            string[] menuTexts =
+            {
+        "Trạng thái món",
+        "Thực đơn",
+        "Bàn",
+        "Thanh toán",
+        "Nhân viên",
+        "Doanh thu",
+        "Nguyên liệu",
+        "Tài khoản"
+    };
+
+            for (int i = 0; i < menuButtons.Length; i++)
+            {
+                Button button = menuButtons[i];
+
+                button.BackColor = menuColor;
+                button.ForeColor = textColor;
+                button.Cursor = Cursors.Hand;
+
+                button.FlatStyle = FlatStyle.Flat;
+                button.FlatAppearance.BorderSize = 0;
+                button.FlatAppearance.MouseOverBackColor = hoverColor;
+                button.FlatAppearance.MouseDownBackColor = pressedColor;
+
+                button.Font = new Font(
+                    "Segoe UI",
+                    11F,
+                    FontStyle.Regular,
+                    GraphicsUnit.Point
+                );
+
+                button.Text = "   " + menuTexts[i];
+                button.TextAlign = ContentAlignment.MiddleLeft;
+                button.UseVisualStyleBackColor = false;
+
+                button.Location = new Point(15, 220 + i * 58);
+                button.Size = new Size(412, 52);
+                button.TabIndex = i + 1;
+            }
+
+            // =============================================
+            // GIỮ NGUYÊN CÁC SỰ KIỆN CLICK
+            // =============================================
+
             btnHome.Name = "btnHome";
-            btnHome.Size = new Size(442, 52);
-            btnHome.TabIndex = 1;
-            btnHome.Text = "Trạng thái món";
-            btnHome.UseVisualStyleBackColor = false;
             btnHome.Click += btnHome_Click;
-            // 
-            // FormAdmin
-            // 
+
+            btnFood.Name = "btnFood";
+            btnFood.Click += btnFood_Click;
+
+            btnTable.Name = "btnTable";
+            btnTable.Click += btnTable_Click;
+
+            btnBill.Name = "btnBill";
+            btnBill.Click += btnBill_Click;
+
+            btnEmployee.Name = "btnEmployee";
+            btnEmployee.Click += btnEmployee_Click;
+
+            btnRevenue.Name = "btnRevenue";
+            btnRevenue.Click += btnRevenue_Click;
+
+            BtnIngredient.Name = "BtnIngredient";
+            BtnIngredient.Click += BtnIngredient_Click;
+
+            BtnAccount.Name = "BtnAccount";
+            BtnAccount.Click += BtnAccount_Click;
+
+            // =============================================
+            // NÚT ĐĂNG XUẤT
+            // =============================================
+
+            BtnDangXuat.BackColor = Color.FromArgb(30, 58, 138);
+            BtnDangXuat.Cursor = Cursors.Hand;
+            BtnDangXuat.FlatAppearance.BorderSize = 0;
+            BtnDangXuat.FlatAppearance.MouseDownBackColor =
+                Color.FromArgb(30, 64, 175);
+            BtnDangXuat.FlatAppearance.MouseOverBackColor =
+                Color.FromArgb(37, 99, 235);
+            BtnDangXuat.FlatStyle = FlatStyle.Flat;
+            BtnDangXuat.Font = new Font(
+                "Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
+            BtnDangXuat.ForeColor = Color.White;
+            BtnDangXuat.Location = new Point(15, 800);
+            BtnDangXuat.Name = "BtnDangXuat";
+            BtnDangXuat.Size = new Size(412, 52);
+            BtnDangXuat.TabIndex = 11;
+            BtnDangXuat.Text = "Đăng xuất";
+            BtnDangXuat.UseVisualStyleBackColor = false;
+            BtnDangXuat.Click += BtnDangXuat_Click;
+
+            // =============================================
+            // FORM ADMIN
+            // =============================================
+
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = contentColor;
             ClientSize = new Size(1865, 877);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FormAdmin";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "FormAdmin";
+            Text = "Quản lý nhà hàng";
             Load += FormAdmin_Load;
+
             panel1.ResumeLayout(false);
             panelContainer.ResumeLayout(false);
             panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
         }
+
 
         #endregion
 

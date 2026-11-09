@@ -31,6 +31,8 @@
             btnThoat = new Button();
             panel1 = new Panel();
             Dgv_NhaCC = new DataGridView();
+            IDNCC = new DataGridViewTextBoxColumn();
+            TenNCC = new DataGridViewTextBoxColumn();
             Dgv_NguyenLieu = new DataGridView();
             TenNL = new DataGridViewTextBoxColumn();
             SoLuong = new DataGridViewTextBoxColumn();
@@ -66,8 +68,6 @@
             BtnThem_NCC = new Button();
             BtnXoa_NCC = new Button();
             BtnReload = new Button();
-            IDNCC = new DataGridViewTextBoxColumn();
-            TenNCC = new DataGridViewTextBoxColumn();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)Dgv_NhaCC).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Dgv_NguyenLieu).BeginInit();
@@ -113,6 +113,22 @@
             Dgv_NhaCC.Size = new Size(517, 517);
             Dgv_NhaCC.TabIndex = 0;
             Dgv_NhaCC.CellContentClick += Dgv_NhaCC_CellContentClick;
+            // 
+            // IDNCC
+            // 
+            IDNCC.DataPropertyName = "ID_NCC";
+            IDNCC.HeaderText = "ID_NCC";
+            IDNCC.MinimumWidth = 10;
+            IDNCC.Name = "IDNCC";
+            IDNCC.Width = 80;
+            // 
+            // TenNCC
+            // 
+            TenNCC.DataPropertyName = "TenNCC";
+            TenNCC.HeaderText = "Tên";
+            TenNCC.MinimumWidth = 10;
+            TenNCC.Name = "TenNCC";
+            TenNCC.Width = 350;
             // 
             // Dgv_NguyenLieu
             // 
@@ -355,7 +371,7 @@
             groupBox4.Controls.Add(BtnSua_NL);
             groupBox4.Controls.Add(BtnThem_NL);
             groupBox4.Controls.Add(BtnXoa_NL);
-            groupBox4.Location = new Point(906, 250);
+            groupBox4.Location = new Point(750, 253);
             groupBox4.Name = "groupBox4";
             groupBox4.Size = new Size(507, 99);
             groupBox4.TabIndex = 31;
@@ -369,7 +385,7 @@
             BtnSua_NL.FlatStyle = FlatStyle.Flat;
             BtnSua_NL.Font = new Font("Algerian", 10.125F, FontStyle.Bold);
             BtnSua_NL.ForeColor = Color.White;
-            BtnSua_NL.Location = new Point(174, 38);
+            BtnSua_NL.Location = new Point(181, 38);
             BtnSua_NL.Name = "BtnSua_NL";
             BtnSua_NL.Size = new Size(150, 46);
             BtnSua_NL.TabIndex = 28;
@@ -386,7 +402,7 @@
             BtnThem_NL.FlatStyle = FlatStyle.Flat;
             BtnThem_NL.Font = new Font("Algerian", 10.125F, FontStyle.Bold);
             BtnThem_NL.ForeColor = Color.White;
-            BtnThem_NL.Location = new Point(6, 38);
+            BtnThem_NL.Location = new Point(13, 38);
             BtnThem_NL.Name = "BtnThem_NL";
             BtnThem_NL.Size = new Size(150, 46);
             BtnThem_NL.TabIndex = 28;
@@ -402,7 +418,7 @@
             BtnXoa_NL.FlatStyle = FlatStyle.Flat;
             BtnXoa_NL.Font = new Font("Algerian", 10.125F, FontStyle.Bold);
             BtnXoa_NL.ForeColor = Color.White;
-            BtnXoa_NL.Location = new Point(336, 38);
+            BtnXoa_NL.Location = new Point(343, 38);
             BtnXoa_NL.Name = "BtnXoa_NL";
             BtnXoa_NL.Size = new Size(150, 46);
             BtnXoa_NL.TabIndex = 28;
@@ -481,29 +497,13 @@
             BtnReload.FlatStyle = FlatStyle.Flat;
             BtnReload.Font = new Font("Algerian", 10.125F, FontStyle.Bold);
             BtnReload.ForeColor = Color.White;
-            BtnReload.Location = new Point(748, 288);
+            BtnReload.Location = new Point(594, 291);
             BtnReload.Name = "BtnReload";
             BtnReload.Size = new Size(150, 46);
             BtnReload.TabIndex = 28;
             BtnReload.Text = "Làm mới";
             BtnReload.UseVisualStyleBackColor = false;
             BtnReload.Click += BtnReload_Click;
-            // 
-            // IDNCC
-            // 
-            IDNCC.DataPropertyName = "ID_NCC";
-            IDNCC.HeaderText = "ID_NCC";
-            IDNCC.MinimumWidth = 10;
-            IDNCC.Name = "IDNCC";
-            IDNCC.Width = 80;
-            // 
-            // TenNCC
-            // 
-            TenNCC.DataPropertyName = "TenNCC";
-            TenNCC.HeaderText = "Tên";
-            TenNCC.MinimumWidth = 10;
-            TenNCC.Name = "TenNCC";
-            TenNCC.Width = 350;
             // 
             // UC_Ingredient
             // 

@@ -37,11 +37,11 @@
             dateTimePickerto = new DateTimePicker();
             panel2 = new Panel();
             dataGridView1 = new DataGridView();
+            BtnCapNhat = new Button();
+            BtnXuaEC = new Button();
             TenBan = new DataGridViewTextBoxColumn();
             NgayTao = new DataGridViewTextBoxColumn();
             ThanhTien = new DataGridViewTextBoxColumn();
-            BtnCapNhat = new Button();
-            BtnXuaEC = new Button();
             groupBox1.SuspendLayout();
             panel1.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -142,30 +142,6 @@
             dataGridView1.Size = new Size(1416, 539);
             dataGridView1.TabIndex = 0;
             // 
-            // TenBan
-            // 
-            TenBan.DataPropertyName = "TenBan";
-            TenBan.HeaderText = "Tên bàn";
-            TenBan.MinimumWidth = 10;
-            TenBan.Name = "TenBan";
-            TenBan.Width = 200;
-            // 
-            // NgayTao
-            // 
-            NgayTao.DataPropertyName = "NgayTao";
-            NgayTao.HeaderText = "Ngày tạo";
-            NgayTao.MinimumWidth = 10;
-            NgayTao.Name = "NgayTao";
-            NgayTao.Width = 200;
-            // 
-            // ThanhTien
-            // 
-            ThanhTien.DataPropertyName = "ThanhTien";
-            ThanhTien.HeaderText = "Thành tiền";
-            ThanhTien.MinimumWidth = 10;
-            ThanhTien.Name = "ThanhTien";
-            ThanhTien.Width = 200;
-            // 
             // BtnCapNhat
             // 
             BtnCapNhat.BackColor = Color.IndianRed;
@@ -200,6 +176,30 @@
             BtnXuaEC.UseVisualStyleBackColor = false;
             BtnXuaEC.Click += BtnXuaEC_Click;
             // 
+            // TenBan
+            // 
+            TenBan.DataPropertyName = "TenBan";
+            TenBan.HeaderText = "Tên bàn";
+            TenBan.MinimumWidth = 10;
+            TenBan.Name = "TenBan";
+            TenBan.Width = 400;
+            // 
+            // NgayTao
+            // 
+            NgayTao.DataPropertyName = "NgayTao";
+            NgayTao.HeaderText = "Ngày tạo";
+            NgayTao.MinimumWidth = 10;
+            NgayTao.Name = "NgayTao";
+            NgayTao.Width = 400;
+            // 
+            // ThanhTien
+            // 
+            ThanhTien.DataPropertyName = "ThanhTien";
+            ThanhTien.HeaderText = "Thành tiền";
+            ThanhTien.MinimumWidth = 10;
+            ThanhTien.Name = "ThanhTien";
+            ThanhTien.Width = 500;
+            // 
             // UC_Revenue
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
@@ -232,10 +232,10 @@
         private Panel panel2;
         private DataGridView dataGridView1;
         private Button BtnCapNhat;
+        private Button BtnThoat;
+        private Button BtnXuaEC;
         private DataGridViewTextBoxColumn TenBan;
         private DataGridViewTextBoxColumn NgayTao;
         private DataGridViewTextBoxColumn ThanhTien;
-        private Button BtnThoat;
-        private Button BtnXuaEC;
     }
 }

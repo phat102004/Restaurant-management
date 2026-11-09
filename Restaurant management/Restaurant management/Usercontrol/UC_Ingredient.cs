@@ -23,6 +23,7 @@ namespace Restaurant_management.User_control
             docGhi = new SqlDataAdapter();
             duLieu = new DataSet();
             InitializeComponent();
+            ApplyModernBlueTheme();
         }
         private void Load_Data()
         {
@@ -33,6 +34,54 @@ namespace Restaurant_management.User_control
 
             Dgv_NguyenLieu.DataSource = duLieu.Tables[0];
         }
+
+
+        private void ApplyModernBlueTheme()
+        {
+            Color primaryBlue = Color.FromArgb(30, 64, 175);
+            Color brightBlue = Color.FromArgb(37, 99, 235);
+            Color darkBlue = Color.FromArgb(16, 42, 67);
+            Color contentBg = Color.FromArgb(241, 245, 249);
+            Color dangerRed = Color.FromArgb(185, 28, 28);
+
+            BackColor = contentBg;
+
+            Button[] buttons =
+            {
+        BtnThem_NL,
+        BtnSua_NL,
+        BtnXoa_NL,
+        BtnThem_NCC,
+        BtmSua_NCC,
+        BtnXoa_NCC,
+        btnTimKiem,
+        BtnReload
+    };
+
+            foreach (Button button in buttons)
+            {
+                button.BackColor = primaryBlue;
+                button.ForeColor = Color.White;
+                button.FlatStyle = FlatStyle.Flat;
+                button.FlatAppearance.BorderSize = 0;
+                button.FlatAppearance.MouseOverBackColor = brightBlue;
+                button.FlatAppearance.MouseDownBackColor = darkBlue;
+                button.Font = new Font(
+                    "Segoe UI", 10F, FontStyle.Bold);
+                button.Cursor = Cursors.Hand;
+                button.UseVisualStyleBackColor = false;
+            }
+
+            BtnXoa_NL.BackColor = dangerRed;
+            BtnXoa_NCC.BackColor = dangerRed;
+
+            BtnXoa_NL.FlatAppearance.MouseOverBackColor =
+                Color.FromArgb(220, 38, 38);
+
+            BtnXoa_NCC.FlatAppearance.MouseOverBackColor =
+                Color.FromArgb(220, 38, 38);
+        }
+
 
         private void Load_NCC()
         {
@@ -51,7 +100,7 @@ namespace Restaurant_management.User_control
 
         private void UC_Ingredient_Load(object sender, EventArgs e)
         {
-            string ChuoiKN = @"Data Source=LAPTOP-MK554FA4;Initial Catalog=DoAn;Integrated Security=True;Trust Server Certificate=True";
+            string ChuoiKN = @"Data Source=LAPTOP-MK554FA4;Initial Catalog=QuanLyNhaHang;Integrated Security=True;Trust Server Certificate=True";
             ketNoi = new SqlConnection(ChuoiKN);
             Load_Data();
             Load_NCC();

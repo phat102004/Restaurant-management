@@ -27,7 +27,7 @@ namespace Restaurant_management.User_control
         }
         private void Bill_Load(object sender, EventArgs e)
         {
-            string chuoiKN = @"Data Source=LAPTOP-MK554FA4;Initial Catalog=DoAn;Integrated Security=True;Trust Server Certificate=True";
+            string chuoiKN = @"Data Source=LAPTOP-MK554FA4;Initial Catalog=QuanLyNhaHang;Integrated Security=True;Trust Server Certificate=True";
             ketNoi = new SqlConnection(chuoiKN);
             CreateButton();
             TinhTongTien();
@@ -58,18 +58,53 @@ namespace Restaurant_management.User_control
                     int trangThai = Convert.ToInt32(reader["TrangThai"]);
                     int soLuongMonAn = Convert.ToInt32(reader["SoLuongMonAn"]);
 
+
                     Button btnTable = new Button
                     {
+                        // Giữ nguyên kích thước, tọa độ
                         Width = 150,
                         Height = 120,
-                        Text = tenBan,
-                        Tag = tenBan,
-                        Font = new Font("Arial", 10, FontStyle.Bold),
                         Location = new Point(x, y),
+
+                        // Giữ nguyên tên và dữ liệu bàn
                         Name = $"btn_{tenBan.Replace(" ", "_")}",
-                        BackColor = (trangThai == 1) ? Color.Red : Color.Green
-                        
+                        Tag = tenBan,
+
+                        // Hiển thị tên bàn và trạng thái
+                        Text = tenBan + Environment.NewLine +
+                               Environment.NewLine +
+                               (trangThai == 1 ? "● Đầy" : "● Trống"),
+
+                        // Giao diện Modern Blue
+                        Font = new Font("Segoe UI", 10F, FontStyle.Bold),
+                        ForeColor = Color.White,
+
+                        BackColor = trangThai == 1
+                            ? Color.FromArgb(30, 64, 175)
+                            : Color.FromArgb(15, 118, 110),
+
+                        FlatStyle = FlatStyle.Flat,
+                        TextAlign = ContentAlignment.MiddleCenter,
+                        Cursor = Cursors.Hand,
+
+                        UseVisualStyleBackColor = false
                     };
+
+                    // Bỏ đường viền cũ
+                    btnTable.FlatAppearance.BorderSize = 0;
+
+                    // Hiệu ứng hover
+                    btnTable.FlatAppearance.MouseOverBackColor =
+                        trangThai == 1
+                            ? Color.FromArgb(37, 99, 235)
+                            : Color.FromArgb(13, 148, 136);
+
+                    // Hiệu ứng khi nhấn
+                    btnTable.FlatAppearance.MouseDownBackColor =
+                        trangThai == 1
+                            ? Color.FromArgb(29, 78, 216)
+                            : Color.FromArgb(17, 94, 89);
+
 
                     x += btnTable.Width + margin;
                     if (x + btnTable.Width > panelTables.Width)

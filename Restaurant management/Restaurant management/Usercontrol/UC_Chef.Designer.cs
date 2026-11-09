@@ -26,9 +26,13 @@
         /// Required method for Designer support - do not modify 
         /// the contents of this method with the code editor.
         /// </summary>
+
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Chef));
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             btnHoanThanh = new Button();
             dgvChef = new DataGridView();
             TenMon = new DataGridViewTextBoxColumn();
@@ -50,10 +54,11 @@
             // 
             // btnHoanThanh
             // 
-            btnHoanThanh.BackColor = Color.IndianRed;
+            btnHoanThanh.BackColor = Color.FromArgb(37, 99, 235);
             btnHoanThanh.Cursor = Cursors.Hand;
-            btnHoanThanh.FlatAppearance.BorderColor = Color.FromArgb(192, 255, 255);
-            btnHoanThanh.FlatAppearance.MouseDownBackColor = Color.IndianRed;
+            btnHoanThanh.FlatAppearance.BorderSize = 0;
+            btnHoanThanh.FlatAppearance.MouseDownBackColor = Color.FromArgb(30, 64, 175);
+            btnHoanThanh.FlatAppearance.MouseOverBackColor = Color.FromArgb(59, 130, 246);
             resources.ApplyResources(btnHoanThanh, "btnHoanThanh");
             btnHoanThanh.ForeColor = Color.White;
             btnHoanThanh.Name = "btnHoanThanh";
@@ -62,8 +67,30 @@
             // 
             // dgvChef
             // 
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(248, 250, 252);
+            dgvChef.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dgvChef.BackgroundColor = Color.White;
+            dgvChef.BorderStyle = BorderStyle.None;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(30, 64, 175);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dgvChef.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgvChef.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvChef.Columns.AddRange(new DataGridViewColumn[] { TenMon, SoLuong, TenBan });
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.White;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 10F);
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(16, 42, 67);
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(219, 234, 254);
+            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(16, 42, 67);
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            dgvChef.DefaultCellStyle = dataGridViewCellStyle3;
+            dgvChef.EnableHeadersVisualStyles = false;
+            dgvChef.GridColor = Color.FromArgb(203, 213, 225);
             resources.ApplyResources(dgvChef, "dgvChef");
             dgvChef.Name = "dgvChef";
             dgvChef.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
@@ -89,7 +116,7 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.IndianRed;
+            panel1.BackColor = Color.White;
             panel1.Controls.Add(dgvChef);
             resources.ApplyResources(panel1, "panel1");
             panel1.Name = "panel1";
@@ -98,50 +125,64 @@
             // 
             resources.ApplyResources(label6, "label6");
             label6.BackColor = Color.White;
+            label6.ForeColor = Color.FromArgb(51, 65, 85);
             label6.Name = "label6";
             // 
             // label4
             // 
             resources.ApplyResources(label4, "label4");
+            label4.ForeColor = Color.FromArgb(51, 65, 85);
             label4.Name = "label4";
             // 
             // label2
             // 
             resources.ApplyResources(label2, "label2");
+            label2.ForeColor = Color.FromArgb(51, 65, 85);
             label2.Name = "label2";
             // 
             // txtTenMon
             // 
+            txtTenMon.BackColor = Color.FromArgb(239, 246, 255);
+            txtTenMon.BorderStyle = BorderStyle.FixedSingle;
+            txtTenMon.ForeColor = Color.FromArgb(16, 42, 67);
             resources.ApplyResources(txtTenMon, "txtTenMon");
             txtTenMon.Name = "txtTenMon";
             txtTenMon.ReadOnly = true;
             // 
             // txtSoLuong
             // 
+            txtSoLuong.BackColor = Color.FromArgb(239, 246, 255);
+            txtSoLuong.BorderStyle = BorderStyle.FixedSingle;
+            txtSoLuong.ForeColor = Color.FromArgb(16, 42, 67);
             resources.ApplyResources(txtSoLuong, "txtSoLuong");
             txtSoLuong.Name = "txtSoLuong";
             txtSoLuong.ReadOnly = true;
             // 
             // txtTenBan
             // 
+            txtTenBan.BackColor = Color.FromArgb(239, 246, 255);
+            txtTenBan.BorderStyle = BorderStyle.FixedSingle;
+            txtTenBan.ForeColor = Color.FromArgb(16, 42, 67);
             resources.ApplyResources(txtTenBan, "txtTenBan");
             txtTenBan.Name = "txtTenBan";
             txtTenBan.ReadOnly = true;
             // 
             // btnThoat
             // 
-            btnThoat.BackColor = Color.IndianRed;
+            btnThoat.BackColor = Color.FromArgb(226, 232, 240);
             btnThoat.Cursor = Cursors.Hand;
-            btnThoat.FlatAppearance.BorderColor = Color.FromArgb(192, 255, 255);
-            btnThoat.FlatAppearance.MouseDownBackColor = Color.IndianRed;
+            btnThoat.FlatAppearance.BorderSize = 0;
+            btnThoat.FlatAppearance.MouseDownBackColor = Color.FromArgb(249, 190, 190);
+            btnThoat.FlatAppearance.MouseOverBackColor = Color.FromArgb(254, 202, 202);
             resources.ApplyResources(btnThoat, "btnThoat");
-            btnThoat.ForeColor = Color.White;
+            btnThoat.ForeColor = Color.FromArgb(51, 65, 85);
             btnThoat.Name = "btnThoat";
             btnThoat.UseVisualStyleBackColor = false;
             btnThoat.Click += btnThoat_Click;
             // 
             // groupBox1
             // 
+            groupBox1.BackColor = Color.White;
             groupBox1.Controls.Add(txtTenMon);
             groupBox1.Controls.Add(label4);
             groupBox1.Controls.Add(txtSoLuong);
@@ -149,6 +190,7 @@
             groupBox1.Controls.Add(txtTenBan);
             groupBox1.Controls.Add(label6);
             resources.ApplyResources(groupBox1, "groupBox1");
+            groupBox1.ForeColor = Color.FromArgb(30, 64, 175);
             groupBox1.Name = "groupBox1";
             groupBox1.TabStop = false;
             // 
@@ -156,7 +198,7 @@
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.White;
+            BackColor = Color.FromArgb(241, 245, 249);
             Controls.Add(groupBox1);
             Controls.Add(btnThoat);
             Controls.Add(btnHoanThanh);
@@ -169,6 +211,7 @@
             groupBox1.PerformLayout();
             ResumeLayout(false);
         }
+
 
         #endregion
         private Button btnHoanThanh;
