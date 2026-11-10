@@ -4,7 +4,7 @@
 
 **Hệ thống Quản lý Nhà hàng (Restaurant Management System)** là ứng dụng desktop được xây dựng bằng **C# Windows Forms (WinForms)** và **Microsoft SQL Server**.
 
-Ứng dụng hỗ trợ quản lý các hoạt động hằng ngày của nhà hàng, bao gồm quản lý thực đơn, bàn ăn, gọi món, thanh toán, nhân viên, nguyên liệu, tài khoản và thống kê doanh thu.
+Ứng dụng hỗ trợ quản lý các hoạt động hằng ngày của nhà hàng, bao gồm đăng nhập, quản lý thực đơn, bàn ăn, gọi món, thanh toán, nhân viên, nguyên liệu, tài khoản và thống kê doanh thu.
 
 Dự án được thực hiện nhằm vận dụng kiến thức lập trình C#, thiết kế giao diện Windows Forms, xử lý dữ liệu với SQL Server và xây dựng các chức năng quản lý theo quy trình nghiệp vụ thực tế.
 
@@ -22,7 +22,12 @@ Dự án được thực hiện nhằm vận dụng kiến thức lập trình C
 
 ## Chức năng chính
 
-### 1. Trang tổng quan quản trị (Admin Dashboard)
+### 1. Đăng nhập hệ thống
+
+- Xác thực tài khoản trước khi truy cập ứng dụng.
+- Hỗ trợ đăng nhập và điều hướng đến giao diện phù hợp với quyền của người dùng.
+
+### 2. Trang tổng quan quản trị (Admin Dashboard)
 
 - Hiển thị doanh thu trong ngày và trong tháng.
 - Thống kê số lượng món ăn đã bán.
@@ -31,56 +36,56 @@ Dự án được thực hiện nhằm vận dụng kiến thức lập trình C
 - Biểu đồ doanh thu trong 7 ngày gần nhất.
 - Hiển thị Top 5 món ăn bán chạy.
 
-### 2. Quản lý thực đơn
+### 3. Quản lý thực đơn
 
 - Thêm, sửa và xóa thông tin món ăn.
 - Quản lý giá bán và mô tả món ăn.
 - Phân loại món ăn theo danh mục.
 - Tìm kiếm món ăn.
 
-### 3. Quản lý bàn
+### 4. Quản lý bàn
 
 - Hiển thị danh sách bàn trong nhà hàng.
 - Theo dõi trạng thái bàn.
 - Thêm, sửa và xóa thông tin bàn.
 
-### 4. Quản lý gọi món
+### 5. Quản lý gọi món
 
 - Lựa chọn bàn phục vụ.
 - Chọn món ăn và số lượng.
 - Quản lý các món ăn khách hàng đã gọi.
 
-### 5. Quản lý thanh toán
+### 6. Quản lý thanh toán
 
 - Hiển thị thông tin các món ăn đã gọi.
 - Tính toán tổng tiền thanh toán.
 - Xử lý hóa đơn của khách hàng.
 
-### 6. Quản lý bếp và trạng thái món ăn
+### 7. Quản lý bếp và trạng thái món ăn
 
 - Theo dõi các món ăn được gửi đến bếp.
 - Cập nhật tình trạng chế biến món ăn.
 - Hỗ trợ phối hợp giữa bộ phận phục vụ và bếp.
 
-### 7. Quản lý nhân viên
+### 8. Quản lý nhân viên
 
 - Quản lý thông tin nhân viên.
 - Thêm, sửa, xóa và tìm kiếm thông tin nhân viên.
 - Quản lý thông tin chức vụ.
 
-### 8. Thống kê doanh thu
+### 9. Thống kê doanh thu
 
 - Xem doanh thu theo khoảng thời gian.
 - Thống kê doanh thu từ dữ liệu SQL Server.
 - Xuất báo cáo doanh thu ra file Excel.
 
-### 9. Quản lý nguyên liệu
+### 10. Quản lý nguyên liệu
 
 - Quản lý danh sách nguyên liệu.
 - Theo dõi số lượng nguyên liệu.
 - Quản lý thông tin liên quan đến nguyên liệu.
 
-### 10. Quản lý tài khoản
+### 11. Quản lý tài khoản
 
 - Quản lý các tài khoản sử dụng hệ thống.
 - Hỗ trợ đăng nhập và phân quyền truy cập theo chức năng được cấp.
@@ -89,61 +94,69 @@ Dự án được thực hiện nhằm vận dụng kiến thức lập trình C
 
 ## Hình ảnh giao diện ứng dụng
 
-### 1. Trang tổng quan Admin
+Dưới đây là các màn hình chính của hệ thống quản lý nhà hàng.
+
+### 1. Giao diện đăng nhập
+
+Màn hình đăng nhập cho phép người dùng nhập thông tin tài khoản để truy cập hệ thống. Sau khi xác thực thành công, người dùng được chuyển đến giao diện phù hợp với quyền truy cập.
+
+![Giao diện đăng nhập](docs/screenshots/login.png)
+
+### 2. Trang tổng quan Admin
 
 Màn hình tổng quan giúp người quản trị theo dõi tình hình hoạt động kinh doanh của nhà hàng thông qua các chỉ số và biểu đồ thống kê.
 
 ![Trang tổng quan Admin](docs/screenshots/dashboard.png)
 
-### 2. Quản lý thực đơn
+### 3. Quản lý thực đơn
 
 Giao diện quản lý các món ăn, danh mục, giá bán và thông tin thực đơn.
 
 ![Quản lý thực đơn](docs/screenshots/menu-management.png)
 
-### 3. Quản lý bàn
+### 4. Quản lý bàn
 
 Giao diện theo dõi danh sách bàn và tình trạng phục vụ.
 
 ![Quản lý bàn](docs/screenshots/table-management.png)
 
-### 4. Quản lý gọi món
+### 5. Quản lý gọi món
 
 Giao diện hỗ trợ nhân viên lựa chọn bàn, món ăn và xử lý đơn gọi món.
 
 ![Quản lý gọi món](docs/screenshots/order-management.png)
 
-### 5. Quản lý thanh toán
+### 6. Quản lý thanh toán
 
 Giao diện hiển thị hóa đơn, các món đã gọi và thông tin thanh toán.
 
 ![Quản lý thanh toán](docs/screenshots/payment-management.png)
 
-### 6. Quản lý bếp
+### 7. Quản lý bếp
 
 Giao diện quản lý các món ăn cần chế biến và theo dõi tình trạng món.
 
 ![Quản lý bếp](docs/screenshots/kitchen-management.png)
 
-### 7. Quản lý nhân viên
+### 8. Quản lý nhân viên
 
 Giao diện quản lý thông tin nhân sự của nhà hàng.
 
 ![Quản lý nhân viên](docs/screenshots/employee-management.png)
 
-### 8. Thống kê doanh thu
+### 9. Thống kê doanh thu
 
 Giao diện hỗ trợ xem báo cáo doanh thu, lọc dữ liệu theo thời gian và xuất Excel.
 
 ![Thống kê doanh thu](docs/screenshots/revenue-management.png)
 
-### 9. Quản lý nguyên liệu
+### 10. Quản lý nguyên liệu
 
 Giao diện quản lý danh sách và thông tin nguyên liệu.
 
 ![Quản lý nguyên liệu](docs/screenshots/inventory-management.png)
 
-### 10. Quản lý tài khoản
+### 11. Quản lý tài khoản
 
 Giao diện quản lý các tài khoản sử dụng ứng dụng.
 
