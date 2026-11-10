@@ -44,7 +44,6 @@
             txtTenMon = new TextBox();
             txtSoLuong = new TextBox();
             label3 = new Label();
-            label6 = new Label();
             groupBox1 = new GroupBox();
             btnXoa = new Button();
             btnThem = new Button();
@@ -97,9 +96,9 @@
             groupBox3.Controls.Add(label5);
             groupBox3.Controls.Add(cbxDanhMuc);
             groupBox3.Controls.Add(txtGia);
-            groupBox3.Location = new Point(752, 101);
+            groupBox3.Location = new Point(752, 85);
             groupBox3.Name = "groupBox3";
-            groupBox3.Size = new Size(604, 211);
+            groupBox3.Size = new Size(604, 227);
             groupBox3.TabIndex = 17;
             groupBox3.TabStop = false;
             // 
@@ -161,10 +160,9 @@
             groupBox2.Controls.Add(txtTenMon);
             groupBox2.Controls.Add(txtSoLuong);
             groupBox2.Controls.Add(label3);
-            groupBox2.Controls.Add(label6);
-            groupBox2.Location = new Point(9, 101);
+            groupBox2.Location = new Point(9, 85);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(695, 211);
+            groupBox2.Size = new Size(695, 227);
             groupBox2.TabIndex = 16;
             groupBox2.TabStop = false;
             // 
@@ -179,7 +177,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(98, 38);
+            label2.Location = new Point(115, 37);
             label2.Name = "label2";
             label2.Size = new Size(101, 32);
             label2.TabIndex = 3;
@@ -211,7 +209,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(98, 99);
+            label3.Location = new Point(115, 99);
             label3.Name = "label3";
             label3.Size = new Size(108, 32);
             label3.TabIndex = 3;
@@ -387,7 +385,6 @@
         private Button btnSua;
         private Button btnXoa;
         private TextBox txtSoLuong;
-        private Label label6;
         private Label label7;
         private TextBox txtTenMon;
         private Label label8;

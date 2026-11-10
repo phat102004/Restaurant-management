@@ -80,8 +80,7 @@ namespace Restaurant_management.User_control
             {
         txtIDBan,
         txtTenBan,
-        txtTrangThai,
-        txtTimKiem
+        txtTrangThai
     };
 
             foreach (TextBox textbox in textBoxes)
@@ -105,7 +104,6 @@ namespace Restaurant_management.User_control
             {
         btnThem,
         btnSua,
-        btnTimKiem
     };
 
             foreach (Button button in actionButtons)
@@ -360,23 +358,6 @@ namespace Restaurant_management.User_control
                 {
                     ketNoi.Close();
                 }
-            }
-        }
-
-        private void btnTimKiem_Click(object sender, EventArgs e)
-        {
-            string TK = txtTimKiem.Text.Trim();
-            if (TK == "")
-            {
-                UC_Table_Load(sender, e);
-            }
-            else
-            {
-                string sqlTim = "SELECT * FROM Ban where TenMon like '%" + TK + "%'";
-                docGhi = new SqlDataAdapter(sqlTim, ketNoi);
-                duLieu = new DataSet();
-                docGhi.Fill(duLieu);
-                dgvBan.DataSource = duLieu.Tables[0];
             }
         }
 

@@ -80,15 +80,15 @@
             // 
             // btnThoat
             // 
-            btnThoat.BackColor = Color.IndianRed;
+            btnThoat.BackColor = Color.Gainsboro;
             btnThoat.FlatAppearance.BorderColor = Color.FromArgb(192, 255, 255);
             btnThoat.FlatAppearance.MouseDownBackColor = Color.IndianRed;
             btnThoat.FlatStyle = FlatStyle.Flat;
             btnThoat.Font = new Font("Algerian", 10.125F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnThoat.ForeColor = Color.White;
+            btnThoat.ForeColor = Color.Black;
             btnThoat.Location = new Point(1361, 3);
             btnThoat.Name = "btnThoat";
-            btnThoat.Size = new Size(52, 47);
+            btnThoat.Size = new Size(52, 40);
             btnThoat.TabIndex = 1;
             btnThoat.Text = "x";
             btnThoat.UseVisualStyleBackColor = false;

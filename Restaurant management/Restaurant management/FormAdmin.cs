@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using Microsoft.Data.SqlClient;
+using Restaurant_management.Usercontrol;
 namespace Restaurant_management
 {
     public partial class FormAdmin : Form
@@ -17,8 +18,16 @@ namespace Restaurant_management
         public FormAdmin()
         {
             InitializeComponent();
-            UC_TrangThaiMon uC = new();
-            AddUserControl(uC);
+
+            // Đổi tên nút Home thành Tổng quan
+            btnHome.Text = "   Tổng quan";
+
+            // Tạo nút riêng cho chức năng Trạng thái món
+            CreateTrangThaiMonButton();
+
+            // Mở Dashboard khi Admin đăng nhập
+            UC_Dashboard dashboard = new();
+            AddUserControl(dashboard);
         }
         private void AddUserControl(UserControl userControl)
         {
@@ -30,9 +39,49 @@ namespace Restaurant_management
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            UC_TrangThaiMon uC = new();
-            AddUserControl(uC);
+            UC_Dashboard dashboard = new();
+            AddUserControl(dashboard);
         }
+
+
+        private void CreateTrangThaiMonButton()
+        {
+            Button btnTrangThaiMon = new Button();
+
+            btnTrangThaiMon.Name = "btnTrangThaiMon";
+            btnTrangThaiMon.Text = "   Trạng thái món";
+
+            btnTrangThaiMon.Size = new Size(412, 52);
+            btnTrangThaiMon.Location = new Point(15, 684);
+
+            btnTrangThaiMon.BackColor =
+                Color.FromArgb(30, 64, 175);
+
+            btnTrangThaiMon.ForeColor = Color.White;
+            btnTrangThaiMon.Font =
+                new Font("Segoe UI", 11F);
+
+            btnTrangThaiMon.FlatStyle = FlatStyle.Flat;
+            btnTrangThaiMon.FlatAppearance.BorderSize = 0;
+
+            btnTrangThaiMon.FlatAppearance.MouseOverBackColor =
+                Color.FromArgb(37, 99, 235);
+
+            btnTrangThaiMon.TextAlign =
+                ContentAlignment.MiddleLeft;
+
+            btnTrangThaiMon.Cursor = Cursors.Hand;
+
+            btnTrangThaiMon.Click += (sender, e) =>
+            {
+                UC_TrangThaiMon uc = new();
+                AddUserControl(uc);
+            };
+
+            panel2.Controls.Add(btnTrangThaiMon);
+            btnTrangThaiMon.BringToFront();
+        }
+
 
         private void btnOrder_Click(object sender, EventArgs e)
         {

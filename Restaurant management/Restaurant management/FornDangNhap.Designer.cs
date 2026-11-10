@@ -52,9 +52,9 @@
             panel3.Controls.Add(Btn_Thoat);
             panel3.Controls.Add(groupBox1);
             panel3.Controls.Add(btnDangNhap);
-            panel3.Location = new Point(515, 0);
+            panel3.Location = new Point(570, 0);
             panel3.Name = "panel3";
-            panel3.Size = new Size(515, 621);
+            panel3.Size = new Size(511, 621);
             panel3.TabIndex = 5;
             // 
             // Btn_Thoat
@@ -139,7 +139,7 @@
             panel2.Controls.Add(pictureBox1);
             panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(509, 621);
+            panel2.Size = new Size(554, 621);
             panel2.TabIndex = 4;
             // 
             // label4
@@ -158,7 +158,7 @@
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new Point(-10, 103);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(519, 515);
+            pictureBox1.Size = new Size(547, 515);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 6;
             pictureBox1.TabStop = false;
@@ -168,7 +168,7 @@
             AcceptButton = btnDangNhap;
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1030, 621);
+            ClientSize = new Size(1093, 621);
             Controls.Add(panel3);
             Controls.Add(panel2);
             FormBorderStyle = FormBorderStyle.None;

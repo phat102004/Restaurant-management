@@ -85,7 +85,7 @@ namespace Restaurant_management.User_control
             Label[] labels =
             {
         label2, label3, label4,
-        label5, label6, label8
+        label5, label8
     };
 
             foreach (Label label in labels)
